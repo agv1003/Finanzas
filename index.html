@@ -191,9 +191,9 @@ const firebaseConfig = {
 };
 let fbApp=null, fbAuth=null, fbDb=null, currentUser=null;
 try{
-  fbApp = firebase.initializeApp(firebaseConfig, 'finanzas');
-  fbAuth = fbApp.auth();
-  fbDb = fbApp.firestore();
+  fbApp = firebase.initializeApp(firebaseConfig);
+  fbAuth = firebase.auth();
+  fbDb = firebase.firestore();
 }catch(e){ console.error('Firebase init', e); }
 
 async function signUpEmail(){
